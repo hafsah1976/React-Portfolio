@@ -31,6 +31,11 @@ export default function About() {
               className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
               Skills Gained At GW-Bootcamp
             </a>
+            <a
+              href="#resume" 
+              className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
+              My Resume
+            </a>
           </div>
         </div>
         {/* Right Column - Image */}

@@ -1,3 +1,6 @@
-// src/components/Header.js
+import React from "react";
+import Nav from "../Navigation";
 
-export default function Header() {}
+function Header(props) {
+  const { currentTab, handleTabChange } = props;
+
