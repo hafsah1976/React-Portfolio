@@ -7,17 +7,41 @@ export default function Contact() {
   const [message, setMessage] = React.useState("");
 
 // This function encodes an object into a URL-encoded string.
+//In this function:
+//Object.keys(data) extracts the keys of the data object.
+//map() iterates over each key and encodes it as a key-value pair.
+//encodeURIComponent() is used to ensure that special characters are properly encoded.
 function encode(data) {
   // Use Object.keys() to extract the keys of the data object.
-  // Then, map each key to a URL-encoded key-value pair.
-  // For each key, we encode the key and its corresponding value.
-  // Finally, join all key-value pairs with '&' to form the URL-encoded string.
   return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))     // Then, map each key to a URL-encoded key-value pair. For each key, we encode the key and its corresponding value.
+
+    .join("&");   // Finally, join all key-value pairs with '&' to form the URL-encoded string.
+                  //join("&") joins all key-value pairs with the '&' separator to form the URL-encoded string.
+
 }
 
-  return (
+function handleSubmit(e) {
+  // prevents the default form submission behavior to handle the submission via JavaScript.
+  e.preventDefault();
+
+  // Send a POST request to the server ("/") with the form data.
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    // The body of the request is the URL-encoded form data.
+    body: encode({ "form-name": "contact", name, email, message }),
+  })
+    .then(() => {
+      // If the request is successful, show a success message to the user.
+      alert("Message sent!");
+    })
+    .catch((error) => {
+      // If there's an error with the request, show an alert with the error message.
+      alert(error);
+    });
+}
+return (
     <section id="contact" className="relative">
       <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
         {/* Left Column - Contact Information */}
