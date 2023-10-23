@@ -18,27 +18,81 @@ export default function Contact() {
             style={{ filter: "opacity(0.7)" }}
             src="https://www.google.com/maps/embed/v1/place?q=7514+Woodside+Lane,+Lorton,+VA,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
                 </iframe>
-                <div className="">
-            <div className="">
-              <h2 className="">
+                <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
+            <div className="lg:w-1/2 px-6">
+              <h2 className="title-font font-semibold text-white tracking-widest text-xs">
                 ADDRESS
               </h2>
-              <p className="">
-                House 951 St.AbuBakr <br />
+              <p className="mt-1">
+                House 951 Abu-Bakr St. <br />
                 Bahria Town, Islamabad
               </p>
             </div>
-            <div className="">
-              <h2 className="">
+            <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
+              <h2 className="title-font font-semibold text-white tracking-widest text-xs">
                 EMAIL
               </h2>
-              <a className="">
+              <a className="text-indigo-400 leading-relaxed">
                 hafsah999@gmail.com
               </a>
-              <h2 className="">
+              <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
                 PHONE
               </h2>
-              <p className="">123-456-7890</p>
+              <p className="leading-relaxed">123-456-7890</p>
             </div>
           </div>
         </div>
+        <form
+          netlify
+          name="contact"
+          className="">
+          <h2 className="">
+            Contact Me
+          </h2>
+          <p className="">
+            Please feel free to contact me about anything.
+          </p>
+          <div className=" ">
+            <label htmlFor="name" className="">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              className=""
+            />
+          </div>
+          <div className="">
+            <label htmlFor="email" className="">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              className=""
+            />
+          </div>
+          <div className="relative mb-4">
+            <label
+              htmlFor="message"
+              className="">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              className=""
+            />
+          </div>
+          <button
+            type="submit"
+            className="">
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+  );
+}
