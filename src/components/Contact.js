@@ -18,4 +18,27 @@ export default function Contact() {
             style={{ filter: "opacity(0.7)" }}
             src="https://www.google.com/maps/embed/v1/place?q=7514+Woodside+Lane,+Lorton,+VA,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
                 </iframe>
-                
+                <div className="">
+            <div className="">
+              <h2 className="">
+                ADDRESS
+              </h2>
+              <p className="">
+                House 951 St.AbuBakr <br />
+                Bahria Town, Islamabad
+              </p>
+            </div>
+            <div className="">
+              <h2 className="">
+                EMAIL
+              </h2>
+              <a className="">
+                hafsah999@gmail.com
+              </a>
+              <h2 className="">
+                PHONE
+              </h2>
+              <p className="">123-456-7890</p>
+            </div>
+          </div>
+        </div>
