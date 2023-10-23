@@ -40,7 +40,7 @@ Hello, I am Hafsah Nasreen.
           <img
             className="object-cover object-center rounded"
             alt="hero"
-            src="./coding.svg"
+            src="./programacion.gif"
           />
         </div>
       </div>
