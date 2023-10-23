@@ -1,8 +1,6 @@
-//import projects.js
-
 import React from "react";
-import { projects } from "../data";//import projects data
-import { CodeIcon } from "@heroicons/react/solid"; //add code  svg icons
+import { projects } from "../data"; // Import projects data
+import { CodeIcon } from "@heroicons/react/solid"; // Import code SVG icons
 
 export default function Projects() {
   return (
@@ -11,18 +9,15 @@ export default function Projects() {
         <div className="flex flex-col w-full mb-20">
           <CodeIcon className="mx-auto inline-block w-10 mb-4" />
           <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
-            See What I've built
+            See What I've Built
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Here are some of the projects that I have worked on, you can check them out and see more details about each one on my repo.
+            Here are some of the projects that I have worked on. You can check them out and see more details about each one on my repo.
           </p>
         </div>
-         <div className="flex flex-wrap -m-4">
+        <div className="flex flex-wrap -m-4">
           {projects.map((project) => (
-            <a
-              href={project.link}
-              key={project.image}
-              className="sm:w-1/2 w-100 p-4">
+            <a href={project.link} key={project.image} className="sm:w-1/2 w-full p-4">
               <div className="flex relative">
                 <img
                   alt="gallery"
@@ -45,4 +40,4 @@ export default function Projects() {
       </div>
     </section>
   );
-};
+}

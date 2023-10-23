@@ -7,6 +7,7 @@ function Footer() {
     <footer className="bg-gray-800 p-4 text-white">
       <h2 className="text-center text-lg font-semibold">Made by Hafsah Nasreen</h2>
 
+      {/* Social media links */}
       <ul className="flex justify-center mt-2">
         <li className="mr-4">
           <a
