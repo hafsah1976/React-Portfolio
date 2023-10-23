@@ -1,12 +1,28 @@
-// src/components/Contact.js
-
 import React from "react";
 
 export default function Contact() {
+  // State variables for form fields
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
+
+// This function encodes an object into a URL-encoded string.
+function encode(data) {
+  // Use Object.keys() to extract the keys of the data object.
+  // Then, map each key to a URL-encoded key-value pair.
+  // For each key, we encode the key and its corresponding value.
+  // Finally, join all key-value pairs with '&' to form the URL-encoded string.
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
   return (
     <section id="contact" className="relative">
       <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
+        {/* Left Column - Contact Information */}
         <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+          {/* Google Maps Embedded iframe */}
           <iframe
             width="100%"
             height="100%"
@@ -16,9 +32,10 @@ export default function Contact() {
             marginHeight={0}
             marginWidth={0}
             style={{ filter: "opacity(0.7)" }}
-            src="https://www.google.com/maps/embed/v1/place?q=7514+Woodside+Lane,+Lorton,+VA,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
-                </iframe>
-                <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
+            src="https://www.google.com/maps/embed/v1/place?q=7514+Woodside+Lane,+Lorton,+VA,+USA&key=YOUR_API_KEY">
+          </iframe>
+          <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
+            {/* Address */}
             <div className="lg:w-1/2 px-6">
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">
                 Address:
@@ -28,6 +45,7 @@ export default function Contact() {
                 Bahria Town, Islamabad
               </p>
             </div>
+            {/* Email and Phone */}
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">
                 E-mail:
@@ -42,19 +60,21 @@ export default function Contact() {
             </div>
           </div>
         </div>
+        {/* Right Column - Contact Form */}
         <form
           netlify
           name="contact"
-          className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+          className="lg-w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
           <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
             Contact Me
           </h2>
           <p className="leading-relaxed mb-5">
             Please contact me if you have any questions.
           </p>
+          {/* Name Input Field */}
           <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-400">
-              Name
+              Name:
             </label>
             <input
               type="text"
@@ -63,6 +83,7 @@ export default function Contact() {
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
+          {/* Email Input Field */}
           <div className="relative mb-4">
             <label htmlFor="email" className="leading-7 text-sm text-gray-400">
               Email:
@@ -74,6 +95,7 @@ export default function Contact() {
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
+          {/* Message Textarea */}
           <div className="relative mb-4">
             <label
               htmlFor="message"
@@ -86,6 +108,7 @@ export default function Contact() {
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             />
           </div>
+          {/* Submit Button */}
           <button
             type="submit"
             className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
