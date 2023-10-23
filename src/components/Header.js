@@ -1,6 +1,6 @@
 import React from "react";
-import Nav from "../Navigation";
-import img from "../../assets/images/hop.jpg"; // Correct the image path
+import Nav from "../Navbar";
+import img from "../../assets/images/hop.jpg"; 
 
 function Header(props) {
   const { currentTab, handleTabChange } = props;

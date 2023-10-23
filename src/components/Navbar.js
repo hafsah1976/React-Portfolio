@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { ArrowRightIcon } from "@heroicons/react/solid";
+import { capitalizeFirstLetter } from "../utils/helpers";
 
-export default function Navigation(props) {
+export default function Navbar(props) {
   // here we are destructuring props to access currentTab and handleTabChange
   const { currentTab, handleTabChange } = props;
 

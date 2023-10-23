@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function About() {
+
   return (
     <section id="about" className="bg-gray-900 text-white py-20">
       <div className="container mx-auto flex px-10 md:px-20 py-20 md:flex-row flex-col items-center">
@@ -29,7 +30,7 @@ export default function About() {
             <a
               href="#skills"
               className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-              Skills Gained At GW-Bootcamp
+              Skills Gained
             </a>
             <a
               href="#resume" 
