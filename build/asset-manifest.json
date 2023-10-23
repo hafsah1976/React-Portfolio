@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b827476a.css",
+    "main.js": "/static/js/main.426284ae.js",
+    "static/media/Hafsah_Nasreen.pdf": "/static/media/Hafsah_Nasreen.9534795ada668dbda38c.pdf",
+    "static/media/hop.jpg": "/static/media/hop.5527ccf8645f27aa8db7.jpg",
+    "index.html": "/index.html",
+    "main.b827476a.css.map": "/static/css/main.b827476a.css.map",
+    "main.426284ae.js.map": "/static/js/main.426284ae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b827476a.css",
+    "static/js/main.426284ae.js"
+  ]
+}

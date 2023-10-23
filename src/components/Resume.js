@@ -2,7 +2,7 @@
 import React from "react";
 
 // Import myResume, which is a link to the PDF resume file
-import Resume from "./assets/document/Hafsah Nasreen.pdf";
+import myResume from "../assets/document/Hafsah_Nasreen.pdf";
 
 // Import icons from various icon libraries, possibly for use in the component
 import { BsCloudDownload } from "react-icons/bs"; // Download cloud icon
@@ -18,7 +18,7 @@ export default function Resume() {
             My Resume
           </h2>
           <div className="flex justify-center">
-            <a href={Resume} className="text-white hover:text-gray-400" download>
+            <a href={myResume} className="text-white hover:text-gray-400" download>
               <BsCloudDownload className="w-6 h-6 mr-2" /> {/* Download cloud icon */}
               Download Resume
             </a>

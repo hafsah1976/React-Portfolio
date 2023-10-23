@@ -4,7 +4,7 @@ export const projects = [
     subtitle: "HTML, CSS, & JS",
     description:
       "A simple quiz app, the first group project.",
-    image: "public/assets/images/odd-quote-out.png", 
+    image: "../assets/images/odd-quote-out.png", 
     link: "https://iab-19.github.io/odd_quote_out_kanye_edition/",
   },
   {
@@ -12,7 +12,7 @@ export const projects = [
     subtitle: "HTML, CSS, and JS",
     description:
       "A weather dashboard web where a user can look up weather for a city. This app uses the openweather API to fetch weather upon the submission of the user's search input.",
-    image: "public/assets/images/weather-dashboard.png", 
+    image: "../assets/images/weather-dashboard.png", 
     link: "https://hafsah1976.github.io/Weather-Dashboard/",
   },
   {
@@ -20,7 +20,7 @@ export const projects = [
     subtitle: "A PWA text editor",
     description:
       "J.A.T.E is a Progressive Web Application (PWA) designed to provide users with a versatile and rich text editor experience.",
-    image: "public/assets/images/JATE-LAUNCHED.png", 
+    image: "../assets/images/JATE-LAUNCHED.png", 
     link: "https://stark-depths-32465-9c6c904f031b.herokuapp.com/",
   },
   {
@@ -28,7 +28,7 @@ export const projects = [
     subtitle: "Node.js - Inquirer prompts",
     description:
       "A CLI that asks users for their input on the shape, text, and color of the logo, and generates that logo.",
-    image: "public/assets/images/svg-logo-maker.png", 
+    image: "../assets/images/svg-logo-maker.png", 
     link: "https://github.com/hafsah1976/SVG-LOGO-GENERATOR",
   },
   {
@@ -36,7 +36,7 @@ export const projects = [
     subtitle: "NoSQL, MongoDB and Mongoose",
     description:
       "This is a backend application where I performed CRUD operations for a Social-Network website.",
-    image: "public/assets/images/No-sql-socialnet-api.png", 
+    image: "../assets/images/No-sql-socialnet-api.png", 
     link: "https://github.com/hafsah1976/NoSQL-Social-Network-API",
   },
   {
@@ -44,7 +44,7 @@ export const projects = [
     subtitle: "MVC",
     description:
       "A CMS-style Tech blog developed using the MVC framework, where users can sign up, make posts, and add comments to other posts.",
-    image: "public/assets/images/the-tech-blog.png",
+    image: "../assets/images/the-tech-blog.png",
     link: "https://github.com/hafsah1976/A-Tech-Blog",
   },
 ];
