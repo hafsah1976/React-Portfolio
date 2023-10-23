@@ -2,7 +2,7 @@
 
 import React from "react";
 import { projects } from "../data";//import projects data
-import { CodeIcon } from "@heroicons/react/solid"; //add code  icons/image
+import { CodeIcon } from "@heroicons/react/solid"; //add code  svg icons
 
 export default function Projects() {
   return (

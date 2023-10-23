@@ -1,60 +1,62 @@
 export const projects = [
   {
-    title: "React Reserve",
-    subtitle: "MERN Stack",
+    title: "Odd Quote Out",
+    subtitle: "HTML, CSS , & JS",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-1.gif",
-    link: "https://reactbootcamp.com",
+      "A simple quiz app, the first group project.",
+    image: "./odd-quote-out-pic",
+    link: "https://iab-19.github.io/odd_quote_out_kanye_edition/",
   },
   {
-    title: "React Tracks",
-    subtitle: "React and Python",
+    title: "Weather Dashboard",
+    subtitle: "HTML, CSS, and JS",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-2.gif",
-    link: "https://reactbootcamp.com",
+      "A weather dashboard web where a  user can look up weather for a city. This app uses the openweather API to fetch weather upon the submission of user's search input.",
+    image: "./put weather-dashboard",
+    link: "https://hafsah1976.github.io/Weather-Dashboard/",
   },
   {
-    title: "DevChat",
-    subtitle: "React and Firebase",
+    title: "J.A.T.E",
+    subtitle: "A PWA text editor",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-3.gif",
-    link: "https://reactbootcamp.com",
+      "J.A.T.E is a Progressive Web Application (PWA) designed to provide users with a versatile and a rich text editor experience.",
+    image: "./JATE-gif",
+    link: "https://stark-depths-32465-9c6c904f031b.herokuapp.com/",
   },
   {
-    title: "Epic Todo App",
-    subtitle: "React Hooks",
+    title: "SVG-LOGO-MAKER",
+    subtitle: "Node.js - Inquirer prompts",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-4.gif",
-    link: "https://reactbootcamp.com",
+      "A CLI that asks users for their input on the shape, text and color of the logo, and generates that logo.",
+    image: "./svg-logo",
+    link: "https://github.com/hafsah1976/SVG-LOGO-GENERATOR",
   },
-];
+  {
+    title: "NoSQL-Social-Network API",
+    subtitle: "NoSQL, MongoDB and Mongoose",
+    description:
+      "This is a backend application where I performed CRUD operations for a Social-Network website.",
+    image: "./NoSQL-Social",
+    link: "https://github.com/hafsah1976/NoSQL-Social-Network-API",
+  },
+  {
+    title: "A Tech Blog",
+    subtitle: "MVC",
+    description:
+      "A CMS-style Tech blog developed using the MVC framework, where users can sign up then make posts and add comments to other posts.",
+    image: "./mvc",
+    link: "https://github.com/hafsah1976/A-Tech-Blog",
+  },
 
-export const testimonials = [
-  {
-    quote:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quod necessitatibus quidem impedit facilis? Distinctio laboriosam veritatis recusandae minus. Voluptatum accusantium hic laudantium soluta ea sapiente cupiditate officia maiores itaque.",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
-    name: "Jesse Hicks",
-    company: "Zoozle",
-  },
-  {
-    quote:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quod necessitatibus quidem impedit facilis? Distinctio laboriosam veritatis recusandae minus. Voluptatum accusantium hic laudantium soluta ea sapiente cupiditate officia maiores itaque.",
-    image: "https://randomuser.me/api/portraits/men/94.jpg",
-    name: "Ruben Alvarez",
-    company: "Dooble.io",
-  },
 ];
 
 export const skills = [
+  "HTML5",
+  "CSS3",
   "JavaScript",
   "React",
-  "Next.js",
   "Node",
+  "MySQL",
   "GraphQL",
-  "Material UI",
+  "MongoDB",
 ];
