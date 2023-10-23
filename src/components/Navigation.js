@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowRightIcon } from "@heroicons/react/solid"; 
 
-export default function Navbar() {
+export default function Navigation() {
   return (
     <header className="">
       <div className="">
