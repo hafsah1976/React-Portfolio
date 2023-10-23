@@ -8,6 +8,7 @@ export default function App() {
       <About />
       <Projects />
       <Skills />
+      <Resume/>
       <Contact />
       <Footer/>
     </main>

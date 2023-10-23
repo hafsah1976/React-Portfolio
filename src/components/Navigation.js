@@ -20,7 +20,7 @@ export default function Navigation() {
             Skills
           </a>
           {/* Link to download my resume */}
-          <a href="#" className="mr-5 hover:text-white">
+          <a href="#resume" className="mr-5 hover:text-white">
             My Resume
           </a>
         </nav>
