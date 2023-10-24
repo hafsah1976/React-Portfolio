@@ -118,22 +118,27 @@ function validateEmail(email) {
       onChange={(e) => setName(e.target.value)}
     />
   </div>
-  {/* /add validation */}
-  {/* Email Input Field */}
-  <div className="relative mb-4">
-    <label htmlFor="email" className="leading-7 text-sm text-gray-400">
-      Email:
-    </label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      className="input-field"
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-    />
-  </div>
-  {/* Message Textarea */}
+{/* Email Input Field with Validation Error Message */}
+<div className="relative mb-4">
+          <label htmlFor="email" className="leading-7 text-sm text-gray-400">
+            Email:
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            className={`input-field ${emailError && 'input-error'}`}
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              setEmailError(""); // Clear email validation error on change
+            }}
+            required // Make the email field required
+          />
+          {emailError && (
+            <p className="text-red-600 text-sm">{emailError}</p>
+          )}
+        </div>  {/* Message Textarea */}
   <div className="relative mb-4">
     <label
       htmlFor="message"
