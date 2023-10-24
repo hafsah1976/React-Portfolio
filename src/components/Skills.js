@@ -53,8 +53,8 @@ function getSkillIcon(skill) {
       return <FontAwesomeIcon {...iconProps} icon={faDatabase} />;
     case "GraphQL":
       return <FontAwesomeIcon {...iconProps} icon={faGripfire} />;
-      case "MongoDB":
-        return <FontAwesomeIcon {...iconProps} icon={[faDatabase,faLeaf]}/>;
+    case "MongoDB":
+      return <FontAwesomeIcon {...iconProps} icon={faDatabase && faLeaf} />;
     default:
       console.error(`Unsupported skill: ${skill}`);
       return null;

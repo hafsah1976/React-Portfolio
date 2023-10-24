@@ -1,6 +1,6 @@
 import React from "react";
 import { projects } from "../data"; // Import projects data
-import { Code } from "@fortawesome/free-solid-svg-icons"; // Import the FontAwesome code icon.
+import { faCode } from "@fortawesome/free-solid-svg-icons"; // Import the FontAwesome code icon.
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Projects() {
@@ -8,7 +8,7 @@ export default function Projects() {
     <section id="projects" className="text-gray-400 bg-gray-900 body-font">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40">
         <div className="flex flex-col w-full mb-20">
-          <FontAwesomeIcon icon={Code} className="mx-auto inline-block w-10 mb-4" />
+          <FontAwesomeIcon icon={faCode} className="mx-auto inline-block w-10 mb-4" />
           <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
             See What I've Built
           </h1>
