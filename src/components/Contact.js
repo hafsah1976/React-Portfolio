@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
 
 export default function Contact() {
-  // State variables for form fields
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+
+// State variables for form fields and validation error
+const [name, setName] = useState("");
+const [email, setEmail] = useState("");
+const [message, setMessage] = useState("");
+const [emailError, setEmailError] = useState(""); //  email validation error state
+
+// Function to handle email validation
+function validateEmail(email) {
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  return emailPattern.test(email);
+}
+
 
   // This function encodes an object into a URL-encoded string.
   function encode(data) {
@@ -20,19 +29,24 @@ export default function Contact() {
     // Prevent the default form submission behavior.
     e.preventDefault();
 
+    // Validate email
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address");
+      return; // Prevent form submission if email is invalid
+    } else {
+      setEmailError(""); // Clear the email validation error
+    }
+
     // Send a POST request to the server ("/") with the form data.
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      // The body of the request is the URL-encoded form data.
       body: encode({ "form-name": "contact", name, email, message }),
     })
       .then(() => {
-        // If the request is successful, show a success message to the user.
         alert("Message sent!");
       })
       .catch((error) => {
-        // If there's an error with the request, show an alert with the error message.
         alert(error);
       });
   }
