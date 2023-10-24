@@ -1,7 +1,7 @@
 import React from "react";
 import { skills } from "../data";
 import { BadgeCheckIcon, ChipIcon } from "@heroicons/react/solid";
-import { Fade } from "react-reveal"; // Import the Fade component
+import { Fade } from "react-awesome-reveal"; // Import the Fade component
 
 const skillIcons = {
   HTML5: (

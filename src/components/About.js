@@ -1,6 +1,6 @@
 import React from 'react';
 import img from '../assets/images/hop.jpg'; // Import image
-import { Fade } from 'react-reveal'; // Import the fade effect from react-reveal
+import { Fade } from "react-awesome-reveal"; // Import the fade effect from react-reveal
 
 export default function About() {
   return (

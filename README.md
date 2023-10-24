@@ -57,12 +57,11 @@ You can navigate between these sections using the navigation links in the header
 - [React](https://reactjs.org/): The JavaScript library that powers this portfolio.
 - [GitHub](https://github.com/): For hosting the repository and my project code.
 - [Build Portfolio Website with React - FreeCodeCamp](https://www.freecodecamp.org/news/build-portfolio-website-react/)
+- [React Awesome Reveal - Revealing Effects](https://react-awesome-reveal.morello.dev/docs/revealing-effects) :- **Library Used:** `react-awesome-reveal`- Utilized the `Slide` component to create revealing effects for the social media links in my footer component, as described in the official documentation of the `react-awesome-reveal` library.
 
 ## License
 
-This project is open-source and available under the [MIT License](LICENSE).
-
-MIT License
+This project is open-source and available under [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Copyright (c) 2023 hafsah1976
 
