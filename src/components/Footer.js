@@ -1,6 +1,7 @@
 import React from "react";
 import { VscGithubAlt } from "react-icons/vsc";
 import { AiOutlineLinkedin } from "react-icons/ai";
+import { FaStackOverflow } from "react-icons/fa"; // Import the Stack Overflow icon.
 
 function Footer() {
   return (
@@ -23,6 +24,11 @@ function Footer() {
             className="social-link"
           >
             <AiOutlineLinkedin className="w-6 h-6" />
+          </a>
+        </li>
+        <li>
+          <a href="https://stackoverflow.com/users/21809766/hafsah-nasreen" className="social-link">
+            <FaStackOverflow className="w-6 h-6" /> {/* Use the Stack Overflow icon */}
           </a>
         </li>
       </ul>
