@@ -1,0 +1,41 @@
+/* skills.css */
+
+/* Animation for the skills section heading */
+.section-heading {
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  /* Skill item animation */
+  .skill-item {
+    animation: scaleIn 0.5s ease-out, slideIn 0.5s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-20px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
