@@ -42,7 +42,7 @@ The "Portfolio" section showcases six of my applications. Each application is ac
 
 ### Contact
 
-If you want to get in touch with me, the "Contact" section features a contact form. Fill out your name, email address, and message, and I'll get back to you as soon as possible. The form doesn't necessarily work as I want it to , but it will surely ask you to enter your email address.
+If you want to get in touch with me, the "Contact" section features a contact form. Fill out your name, email address, and message, and I'll get back to you as soon as possible. The form doesn't necessarily work as I want it to, but it will surely ask you to enter your email address.
 
 ### Resume
 
@@ -57,7 +57,7 @@ You can navigate between these sections using the navigation links in the header
 - [React](https://reactjs.org/): The JavaScript library that powers this portfolio.
 - [GitHub](https://github.com/): For hosting the repository and my project code.
 - [Build Portfolio Website with React - FreeCodeCamp](https://www.freecodecamp.org/news/build-portfolio-website-react/)
-- [React Awesome Reveal - Revealing Effects](https://react-awesome-reveal.morello.dev/docs/revealing-effects) :- **Library Used:** `react-awesome-reveal`- Utilized the `Slide` component to create revealing effects for the social media links in my footer component, as described in the official documentation of the `react-awesome-reveal` library.
+- Used FontAwesome for React to get all the icons. 
 
 ## License
 
