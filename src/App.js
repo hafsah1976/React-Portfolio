@@ -6,27 +6,42 @@ import Skills from './components/Skills';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import {useState} from "react";
+import { useState } from "react";
+
 export default function App() {
 
-  const [currentTab, handleTabChange] = useState("about");
+  const [currentTab, handleTabChange] = useState("About"); // Fixed the initial value case
   
-  //method to render current tab value 
-
-  const renderCurrentTab =() => {
-    if(currentTab === "About"){
+  // Method to render the current tab value
+  const renderCurrentTab = () => {
+    if (currentTab === "About") {
       return <About />;
     }
-  }
+    if (currentTab === "Projects") {
+      return <Projects />;
+    }
+    if (currentTab === "Skills") {
+      return <Skills />;
+    }
+    if (currentTab === "Resume") {
+      return <Resume />;
+    }
+    if (currentTab === "Contact") {
+      return <Contact />;
+    }
+    return <About />;
+  };
+
   return (
-    <main>
-<Header />
-      <About />
-      <Projects />
-      <Skills />
-      <Resume/>
-      <Contact />
-      <Footer/>
-    </main>
+    <>
+      <Header
+        currentTab={currentTab}
+        handleTabChange={handleTabChange}
+      />
+      <main>
+        {renderCurrentTab()}
+      </main>
+      <Footer />
+    </>
   );
 }

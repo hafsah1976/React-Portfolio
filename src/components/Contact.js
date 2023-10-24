@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 export default function Contact() {
   // State variables for form fields
   const [name, setName] = useState("");
@@ -103,6 +104,7 @@ export default function Contact() {
       onChange={(e) => setName(e.target.value)}
     />
   </div>
+  {/* /add validation */}
   {/* Email Input Field */}
   <div className="relative mb-4">
     <label htmlFor="email" className="leading-7 text-sm text-gray-400">
@@ -134,7 +136,7 @@ export default function Contact() {
     />
   </div>
   {/* Submit Button */}
-  <button type="submit" className="bg-teal-600 text-white hover:bg-teal-700 py-2 px-4 rounded focus:outline-none">
+  <button type="submit" className="bg-teal-600 text-white hover:bg-teal-700 py-2 px-4 rounded-lg focus:outline-none">
     Submit
   </button>
 </form>
