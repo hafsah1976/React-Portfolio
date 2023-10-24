@@ -24,30 +24,48 @@ export default function Contact() {
 
   async function sendContactForm() {
     try {
-      // Fetch request details
+      // Validate email
+      if (!validateEmail(email)) {
+        setEmailError("Please enter a valid email address");
+        return; // Prevent form submission if email is invalid
+      } else {
+        setEmailError(""); // Clear the email validation error
+      }
+  
+      // Prepare the data to be sent in the API request
+      const data = {
+        name: name,
+        email: email,
+        message: message,
+      };
+  
+      // Encode the data for the API request
+      const encodedData = encode(data);
+  
+      // Send a POST request to GitHub's API for creating issues
       const response = await fetch('https://api.github.com/repos/hafsah1976/React-Portfolio/issues', {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${process.env.YOUR-GITHUB-PERSONAL-ACCESS-TOKEN}`, // Use process.env to access environment variables
-          'Content-Type': 'application/json',
+          Authorization: `Bearer ${process.env.GITHUB_PERSONAL_ACCESS_TOKEN}`, // Use process.env to access environment variables
+          'Content-Type': 'application/x-www-form-urlencoded', // Use the appropriate content type
         },
-        body: JSON.stringify({
-          title: 'Contact Form Submission',
-          body: `**Name:** ${name}\n**Email:** ${email}\n**Message:** ${message}`,
-        }),
+        body: encodedData, // Send the encoded data
       });
-
+  
       if (response.ok) {
+        // Request was successful
         alert('Message sent!');
       } else {
+        // Request was not successful, handle the error
         alert('An error occurred while sending the message. Please try again later.');
       }
     } catch (error) {
+      // Catch and handle any network or fetch-related errors
       console.error('An error occurred:', error);
       alert('An error occurred while sending the message. Please try again later.');
     }
   }
-
+  
   return (
     // Contact Section
     <section id="contact" className="relative">
