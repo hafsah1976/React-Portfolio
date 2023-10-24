@@ -1,130 +1,62 @@
-import React from "react";
-import { skills } from "../data";
-import { BadgeCheckIcon, ChipIcon } from "@heroicons/react/solid";
-import { Fade } from "react-awesome-reveal"; // Import the Fade component
+import React from "react";  // Import the React library to define React components.
+import { skills } from "../data";  // Import the 'skills' array from an external data source.
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";  // Import the FontAwesomeIcon component.
+import { faCheck } from "@fortawesome/free-solid-svg-icons";  // Import the 'faCheck' icon from FontAwesome.
+import { faHtml5, faCss3, faJs, faReact, faNode, faDatabase, faGripfire } from "@fortawesome/free-brands-svg-icons";  // Import various icons from FontAwesome.
+import './Skills.css';  // Import the CSS file for styling this component.
 
-const skillIcons = {
-  HTML5: (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#E44D26"
-      height="50"
-      width="50"
-      viewBox="0 0 512 512"
-    >
-      <path d="M504 8.5c2.25-4.8.5-8.7-2.5-11-2.5-2.3-7.2-2.3-14 0l-448 192c-4.8 2.2-7.9 6.4-8 11.5v192c.1 5 3.2 9.3 8 11.5l448 192c6 2.7 11.7 2.6 14 0 2.5-2.2 3-6.1 2.5-11l-202-88.2-16.6-6.5h.1l-4.6-1.9 1.7 7.7 26.3 115.2c1.7 7.5-.1 13.2-4.3 16.9-3.3 3.6-9.5 4.6-16.9 2.3l-30.3-13.3-45.2-198.7h-210.9l11.8 52.3 90 38.4 1.3 5.5-4.2 18.4-46.8 20.5-2.9 12.9-35.5 156.3-4.1 18.1-30.2 13.2c-7.5 2.3-13.6 1.3-16.9-2.3-4.2-3.6-6-9.3-4.3-16.8l34.4-152.1 2.9-12.7-44.5-19.5-202.6 88.5-1.7.6h-.1l-11.5 4.7-7.1 3 1.6-7 13.2-58.4h297l-2.1 8.8h-.1l-39.6 174.3 17 7.4 1.3 5.7-4.5 20-39.6 174.2 38.6-16.9 2.3-10 28.5-125.4h-297l-49.6 218.4 45.7 20c3.3 2.2 9.5 2.3 16.9 0 4.2-2.3 6-8.1 4.3-15.6l-44.5-195.4h209.3l25 109.7-83.3 36.3-5.5 24.2 134.5-59.1 8-34.8h-173.8l-2.1 9.2 25.7 113.3 23.2 102.2h210.5l32.8-144.4 3.8-16.6 5.5-24.2-45.8-20c-3.3-1.4-8.1-1.4-14 0-6 2.6-7.9 6.9-5.7 12.6l17.5 77.2 26.1 115 36.8-16.1-17.4-76.3c-2.2-5.7-1.1-10.1 3.9-13.1 5.1-3 10.3-3.1 16.1 0l159.4 69.8 42.2-18.5 1.4-6.4 12.7-56c.6-3.1.6-6.1 0-9.2l-14.5-63.9h38.3l25.8-113.5c1.4-6 1.4-12.1 0-18.1l-32.9-145.1c-2.2-6-6.6-10-13.1-12.2-6.5-2.1-12.6-2.1-18.5 0l-39.7 174.4c-2.3 10.1.2 20.3 7.4 30.6 8.6 11.7 20.7 16.7 35.8 15.1 14.6-1.5 29.7-10.2 45.4-26.2 8.2-7.1 21.3-23.3 39.3-48.5z"/>
-    </svg>
-  ),
-  CSS3: (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#264DE4"
-      height="50"
-      width="50"
-      viewBox="0 0 640 512"
-    >
-      <path d="M640 64H0l114.3 378.6c4.1 13.5 16.2 22.4 29.9 22.4H496l-45.7-141.4-42.6 140.7H234.3l34.3-115.3H549l25.8-85.8L640 64z"/>
-    </svg>
-  ),
-  JavaScript: (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#F0DB4F"
-      height="50"
-      width="50"
-      viewBox="0 0 20 20"
-    >
-      <path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm0 18.5c-4.7 0-8.5-3.8-8.5-8.5S5.3 1.5 10 1.5 18.5 5.3 18.5 10 14.7 18.5 10 18.5zm-.4-15.8c-.2 0-.4.1-.6.3l-3 4.5c-.3.4-.2.9.2 1.2s.9.2 1.2-.2l2.2-3 2.2 3c.3.4.8.5 1.2.2.4-.3.5-.8.2-1.2l-3-4.5c-.2-.2-.4-.3-.7-.3zm0 2.3c.1 0 .3.1.4.2l1.4 1.1 1.1-1.7-1.6-2.4c-.1-.2-.4-.3-.7-.3-.2 0-.4.1-.6.3l-1.6 2.4-1.3-1 .5-.7 1.1-1.6c.1-.1.2-.2.4-.2l2.3-.2h.2zm0 4.3h-.2l-2.3-.2c-.1 0-.3-.1-.4-.2l-1.1-1.6-.5-.7 1.3-1 1.6 2.4c.1.2.4.3.6.3.3 0 .6-.1.7-.3l1.6-2.4 1.1 1.7-1.4 1.1c-.1.1-.3.2-.4.2zm-.4 4.6c-.4 0-.8-.2-1.2-.6L10 12l-1.1 1.7c-.4.4-.9.5-1.3.1-.4-.4-.5-.9-.1-1.3l2-3c.2-.2.5-.3.7-.3.3 0 .6.1.8.3l2 3c.4.4.3 1-.1 1.3-.2.2-.5.3-.7.3zm-.1 2.7c-.3 0-.5-.1-.8-.3-.4-.4-.4-1 0-1.4l3-3c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10 14.6c-.2.2-.5.3-.7.3z"/>
-    </svg>
-  ),
-  React: (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#61DAFB"
-      height="50"
-      width="50"
-      viewBox="0 0 50 50"
-    >
-      <path d="M25 3.125c-12.414 0-22.5 10.086-22.5 22.5s10.086 22.5 22.5 22.5 22.5-10.086 22.5-22.5S37.414 3.125 25 3.125zm12.073 28.597c-.582.37-1.34.464-2.022.235l-6.777-2.323v5.903c0 .552-.448 1-1 1h-2a1 1 0 01-1-1v-7a1 1 0 011-1h7a1 1 0 011 1v2.926l-.316-.108c-.187-.064-4.66-1.598-7.683 2.498-1.957 2.917-.817 6.868.607 8.384.16.22.071.534-.188.694-.224.16-.554.102-.75-.108-3.2-3.43-5.884-5.85-10.834-4.25-.593.168-1.203.25-1.812.25-2.35 0-4.576-1.15-6.072-3.073-.332-.443-.95-.54-1.392-.208-.442.332-.54.95-.208 1.392 1.96 2.614 4.814 4.072 7.672 4.072 1.473 0 2.942-.268 4.333-.8 5.708-1.285 8.638 7.674 14.34 6.39.38-.085.63-.446.545-.826-.086-.38-.45-.633-.826-.546z"/>
-    </svg>
-  ),
-  Node: (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#8CC84B"
-      height="50"
-      width="50"
-      viewBox="0 0 30 30"
-    >
-      <path d="M15.73 0C8.52 0 3 5.16 3 11.55c0 3.17 1.67 6.06 4.25 8.01-.25 1.67-.72 3.24-1.46 4.67a2.68 2.68 0 002.2 4.14 10.25 10.25 0 006.01 1.94c5.68 0 10.29-4.34 10.29-9.68.02-6.4-5.51-11.56-12.82-11.56zM8.16 21.24c-.25-1.68-.25-3.27.12-4.82a11.4 11.4 0 014.27-1.26c.03 0 .07 0 .1.02.02 0 .04 0 .07.02a8.47 8.47 0 002.07.35c.48 0 .97-.05 1.46-.15 2.13-.42 4.12-1.34 5.82-2.7-.03.04-.06.1-.08.16a4.45 4.45 0 01-3.96 2.41 8.33 8.33 0 004.13 1.36c3.96 0 7.16-3.02 7.16-6.76 0-3.74-3.2-6.76-7.16-6.76-2.87 0-5.46 1.37-7.21 3.51a9.55 9.55 0 01-.93 1.1c-.06.07-.13.15-.21.24-.83.88-2.08 1.44-3.48 1.44-2.56 0-4.63-2.1-4.63-4.68 0-2.18 1.55-3.99 3.61-4.58a10.5 10.5 0 01-.05-1.46C4.52 6.84 1.56 8.96 0 12.01c-.51 1.05-.77 2.2-.77 3.39 0 5.66 5.59 10.26 12.5 10.26 4.56 0 8.64-2.05 11.3-5.24-.04-.27-.08-.53-.12-.8a9.75 9.75 0 01-2.97 1.46c-.02 0-.05 0-.07-.02a10.06 10.06 0 01-2.72.37 11.04 11.04 0 01-2.72-.37c-.02 0-.05 0-.07.02a9.75 9.75 0 01-2.97-1.46c-.04.27-.08.53-.12.8 2.66 3.19 6.74 5.24 11.3 5.24 6.9 0 12.5-4.6 12.5-10.26 0-.48-.04-.97-.11-1.46-2.55 3.05-5.51 5.17-8.9 5.99z"/>
-    </svg>
-  ),
-  MySQL: (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#00758F"
-      height="50"
-      width="50"
-      viewBox="0 0 60 60"
-    >
-      <path d="M29.97 4.667c-16.6 0-29.997 13.398-29.997 29.998 0 10.418 5.32 19.628 13.386 25.122-.128-.6-.212-1.22-.212-1.84 0-9.734 7.904-17.64 17.64-17.64 9.734 0 17.65 7.906 17.65 17.64 0 .72-.085 1.24-.212 1.84 8.065-5.494 13.386-14.704 13.386-25.122.003-16.6-13.394-29.998-29.994-29.998zM30.015 53.324c-7.264 0-13.164-5.898-13.164-13.16s5.9-13.16 13.164-13.16c7.263 0 13.16 5.9 13.16 13.16 0 7.262-5.897 13.16-13.16 13.16z"/>
-      <path d="M40.394 37.685l-.05-.07-.028-.03-.026-.03c-.373-.487-.918-.877-1.568-1.166-.093-.046-.186-.092-.28-.14l-.026-.014a5.935 5.935 0 01-1.762-1.09c-.24-.167-.48-.342-.726-.506a5.373 5.373 0 00-.986-.366 5.47 5.47 0 00-2.018-.128 6.314 6.314 0 00-1.066.36 6.506 6.506 0 00-2.043 1.055 6.045 6.045 0 00-1.47 1.464l-.014.024-.016.028c-.208.315-.426.635-.654.98a9.988 9.988 0 00-1.166 1.97 8.87 8.87 0 00-.504.956c-.262.525-.554 1.16-.76 1.922l.036.06c-.244.396-.383.857-.383 1.368-.006 1.656 1.342 3.004 3 3.01a3 3 0 002.37-1.128c.238-.308.447-.628.626-.958l.02-.04.024-.048c.263-.549.41-1.155.412-1.82a4.005 4.005 0 00-1.07-2.83l-.036-.066c.016-.026.046-.04.07-.06.566-.52 1.183-.944 1.84-1.273l.026-.014c.52-.292 1.084-.5 1.66-.648l.066-.022c.346-.116.704-.206 1.072-.263l.096-.02c.7-.107 1.398-.158 2.102-.153.078.003.164.014.244.02.157.016.312.058.44.124.434.196.61.67.414 1.095z"/>
-    </svg>
-  ),
-  GraphQL: (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#E535AB"
-      height="50"
-      width="50"
-      viewBox="0 0 52 52"
-    >
-      <path d="M13.1 10.6c-5.6 0-10.2 4.6-10.2 10.2 0 5.6 4.6 10.2 10.2 10.2 2.8 0 5.3-1.1 7.3-2.9l10.9 10.9c.1.1.1.2.2.3.2.2.4.4.7.4.6 0 1-.4 1-.9V31.4c0-.2-.2-.4-.4-.6-.1-.1-.2-.2-.3-.2L28 19.6c1.8-2 2.9-4.5 2.9-7.3-.1-5.6-4.7-10.2-10.3-10.2zm-2 19.3l.3.2 1.3 1.3 1.3-1.3.1-.1 4-4-.4-.4c-.1-.1-.3-.2-.4-.2-.2-.1-.5-.1-.7 0l-3.9 3.9-3.9-3.9c-.2-.2-.5-.2-.7 0-.1.1-.2.3-.2.4l-.4.4-4 4c-.2.2-.5.2-.7 0-.2-.2-.2-.5 0-.7l3.9-3.9-3.9-3.9c-.2-.2-.2-.5 0-.7 0-.1.3-.2.4-.2l.4-.4 4-4c.2-.2.5-.2.7 0 .1.1.2.3.2.4l.4.4 3.9 3.9c.2.2.5.2.7 0 .2-.2.2-.5 0-.7l-3.9-3.9 3.9-3.9c.2-.2.5-.2.7 0 .1.1.2.3.2.4l.4.4 4 4c.2.2.5.2.7 0 .2-.2.2-.5 0-.7l-3.9-3.9.4-.4c.1-.1.2-.3.2-.4 0-.2-.2-.5-.4-.7l-4-4-.4-.4c-.2-.2-.3-.2-.4-.2-.2-.1-.5-.1-.7 0l-4 4-.4.4c-.1.1-.3.2-.4.2-.2.2-.2.5 0 .7l4 4 .4.4c.1.1.2.3.2.4 0 .2-.2.5-.4.7l-4 4-.4.4c-.1.1-.3.2-.4.2-.2.1-.5.1-.7 0l-4-4-.4-.4c-.1-.1-.3-.2-.4-.2-.2-.2-.2-.5 0-.7l4-4 .4-.4c.1-.1.2-.3.2-.4 0-.2-.2-.5-.4-.7l-.4-.4-3.9-3.9c-.2-.2-.5-.2-.7 0-.1.1-.2.3-.2.4-.1.2-.2.5 0 .7l.4.4 4 4c.2.2.5.2.7 0 .2-.2.2-.5 0-.7l-3.9-3.9z"/>
-    </svg>
-  ),
-  MongoDB: (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#47A248"
-      height="50"
-      width="50"
-      viewBox="0 0 36 36"
-    >
-      <path d="M33.047 16.968c0 7.132-5.829 12.932-13.032 12.932C12.881 29.9 7.05 24.1 7.05 16.968 7.05 9.82 12.88 4.02 19.015 4.02c7.203 0 13.032 5.8 13.032 12.948zm-24.874.025l-.183.228-2.755 9.672h2.814l2.173-7.594h.125c-.117.176-.293.44-.51.617l-2.935 9.994h3.02l2.914-10.04H8.772zm4.597 1.224l-.217.184-1.918 7.682h2.3l.835-3.088c.25-.93.428-1.94.428-1.94h.037s.178 1.01.428 1.94l.835 3.089h2.3l-1.874-7.682h-2.94zm8.833.085h3.055c-.002 0-.002 7.683-.002 7.683h-3.055s-.002-7.683-.002-7.683zm-9.987 0h3.06s-.002 7.68-.002 7.68H8.84s-.004-7.68-.004-7.68z"/>
-    </svg>
-  ),
-};
-
+// Define a functional React component named 'Skills'.
 export default function Skills() {
   return (
-    <section id="skills" className="bg-gray-900 text-white py-10">
-      <div className="container px-5 mx-auto">
-        <div className="text-center mb-20">
-          <ChipIcon className="w-10 inline-block mb-4" />
+    <section id="skills" className="bg-gray-900 text-white py-10">  {/* Section for displaying skills */}
+      <div className="container px-5 mx-auto">  {/* Container for centering content */}
+        <div className="text-center mb-20">  {/* Center-align the content */}
+          <FontAwesomeIcon icon={faGripfire} className="w-10 inline-block mb-4" />  {/* Display a FontAwesome icon */}
           <h1 className="sm:text-4xl text-3xl font-medium title-font text-white mb-4">
-            Skills & Technologies
+            Skills & Technologies  {/* Display a title */}
           </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
             Here's a list of skills and technologies that I've learned at GW Fullstack Web-Dev bootcamp.
           </p>
         </div>
-        <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-          {skills.map((skill, index) => (
-            <Fade key={index} bottom duration={1000} delay={index * 100}>
-              <div className="p-2 sm:w-1/2 w-full">
-                <div className="bg-gray-800 rounded flex p-4 h-full items-center">
-                  {skillIcons[skill] || (
-                    <BadgeCheckIcon className="text-green-400 w-6 h-6 flex-shrink-0 mr-4" />
-                  )}
-                  <span className="title-font font-medium text-white">
-                    {skill}
-                  </span>
-                </div>
+        <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">  {/* Flex container for skills list */}
+          {skills.map((skill, index) => (  // Map through the 'skills' array and render each skill
+            <div key={index} className="p-2 sm:w-1/2 w-full">  {/* Individual skill item */}
+              <div className="bg-gray-800 rounded flex p-4 h-full items-center">  {/* Skill item container */}
+                {getSkillIcon(skill)}  {/* Display the skill icon */}
+                <span className="title-font font-medium text-white">
+                  {skill}  {/* Display the skill name */}
+                </span>
               </div>
-            </Fade>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
+}
+
+// Function to get the appropriate FontAwesome icon based on the skill name.
+function getSkillIcon(skill) {
+  const iconProps = { icon: faCheck, size: "2x" };  // Define common icon properties.
+
+  // Use a switch statement to determine which specific icon to use based on the skill name.
+  switch (skill) {
+    case "HTML5":
+      return <FontAwesomeIcon {...iconProps} icon={faHtml5} />;
+    case "CSS3":
+      return <FontAwesomeIcon {...iconProps} icon={faCss3} />;
+    case "JavaScript":
+      return <FontAwesomeIcon {...iconProps} icon={faJs} />;
+    case "React":
+      return <FontAwesomeIcon {...iconProps} icon={faReact} />;
+    case "Node":
+      return <FontAwesomeIcon {...iconProps} icon={faNode} />;
+    case "MySQL":
+      return <FontAwesomeIcon {...iconProps} icon={faDatabase} />;
+    case "GraphQL":
+      return <FontAwesomeIcon {...iconProps} icon={faGripfire} />;
+    default:
+      return <FontAwesomeIcon {...iconProps} />;
+  }
 }

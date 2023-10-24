@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-require('dotenv').config(); // Import 'dotenv' at the top
+// require('dotenv').config(); // Import 'dotenv' at the top
+const GITHUB_PERSONAL_ACCESS_TOKEN = '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';
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -12,60 +13,50 @@ export default function Contact() {
     return emailPattern.test(email);
   }
 
-  //  close the 'validateEmail' function before the 'encode' function
-
   function encode(data) {
     return Object.keys(data)
       .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
       .join('&');
   }
 
-  // close the 'encode' function before the 'sendContactForm' function
-
   async function sendContactForm() {
     try {
-      // Validate email
       if (!validateEmail(email)) {
         setEmailError("Please enter a valid email address");
-        return; // Prevent form submission if email is invalid
+        return;
       } else {
-        setEmailError(""); // Clear the email validation error
+        setEmailError("");
       }
-  
-      // Prepare the data to be sent in the API request
+
       const data = {
         name: name,
         email: email,
         message: message,
       };
-  
-      // Encode the data for the API request
+
       const encodedData = encode(data);
-  
-      // Send a POST request to GitHub's API for creating issues
+
+      const apiKey = GITHUB_PERSONAL_ACCESS_TOKEN;
+
       const response = await fetch('https://api.github.com/repos/hafsah1976/React-Portfolio/issues', {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${process.env.GITHUB_PERSONAL_ACCESS_TOKEN}`, // Use process.env to access environment variables
-          'Content-Type': 'application/x-www-form-urlencoded', // Use the appropriate content type
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: encodedData, // Send the encoded data
+        body: encodedData,
       });
-  
+
       if (response.ok) {
-        // Request was successful
         alert('Message sent!');
       } else {
-        // Request was not successful, handle the error
         alert('An error occurred while sending the message. Please try again later.');
       }
     } catch (error) {
-      // Catch and handle any network or fetch-related errors
       console.error('An error occurred:', error);
       alert('An error occurred while sending the message. Please try again later.');
     }
-  }
-  
+  }  
   return (
     // Contact Section
     <section id="contact" className="relative">
@@ -83,7 +74,7 @@ export default function Contact() {
             marginHeight={0}
             marginWidth={0}
             style={{ filter: "opacity(0.7)" }}
-            src="https://www.google.com/maps/embed/v1/place?q=7514+Woodside+Lane,+Lorton,+VA,+USA&key=API_KEY">
+            src="https://www.google.com/maps/embed/v1/place?q=7514+Woodside+Lane,+Lorton,+VA,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
           </iframe>
 
           {/* Address */}
