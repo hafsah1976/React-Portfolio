@@ -36,11 +36,11 @@ export default function Skills() {
   );
 }
 
-// Function to get the appropriate FontAwesome icon based on the skill name.
 function getSkillIcon(skill) {
-  const iconProps = { icon: faCheck, size: "2x" };  // Define common icon properties.
+  // Define the default icon properties
+  const iconProps = { icon: faCheck, size: "2x" };
 
-  // Use a switch statement to determine which specific icon to use based on the skill name.
+  // Check the skill and return the corresponding FontAwesome icon
   switch (skill) {
     case "HTML5":
       return <FontAwesomeIcon {...iconProps} icon={faHtml5} />;
@@ -57,6 +57,9 @@ function getSkillIcon(skill) {
     case "GraphQL":
       return <FontAwesomeIcon {...iconProps} icon={faGripfire} />;
     default:
+      // Log an error message if the skill is unsupported
+      console.error(`Unsupported skill: ${skill}`);
+      // Return a default icon (a checkmark) for unsupported skills
       return <FontAwesomeIcon {...iconProps} />;
   }
 }
