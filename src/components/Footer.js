@@ -1,6 +1,6 @@
 import React from "react";
-import { VscGithubAlt } from "react-icons/vsc";
-import { AiOutlineLinkedin } from "react-icons/ai";
+import { VscGithubAlt } from "react-icons/vsc"; // github icon
+import { AiOutlineLinkedin } from "react-icons/ai"; //linked in
 import { FaStackOverflow } from "react-icons/fa"; // Import the Stack Overflow icon.
 
 function Footer() {
@@ -18,7 +18,7 @@ function Footer() {
             <VscGithubAlt className="w-6 h-6" />
           </a>
         </li>
-        <li>
+        <li className="mr-4"> {/* Added margin-right here to space out icons */}
           <a
             href="https://www.linkedin.com/in/hafsah-bukhari-66b87654/"
             className="social-link"
@@ -26,9 +26,9 @@ function Footer() {
             <AiOutlineLinkedin className="w-6 h-6" />
           </a>
         </li>
-        <li>
-          <a href="https://stackoverflow.com/users/21809766/hafsah-nasreen" className="social-link">
-            <FaStackOverflow className="w-6 h-6" /> {/* Use the Stack Overflow icon */}
+        <li> {/* No margin here */}
+          <a href="https://stackoverflow.com/users/your-user-id" className="social-link">
+            <FaStackOverflow className="w-6 h-6" /> {/* Using the Stack Overflow icon here */}
           </a>
         </li>
       </ul>

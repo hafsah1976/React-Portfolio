@@ -4,6 +4,7 @@ import { capitalizeFirstLetter } from "../utils/helpers";
 export default function Header(props) {
   const { currentTab, handleTabChange } = props;
 
+  // Update the document title based on the current tab
   useEffect(() => {
     document.title = capitalizeFirstLetter(currentTab);
   }, [currentTab]);
@@ -19,6 +20,7 @@ export default function Header(props) {
             </h1>
           </div>
           <div className="flex justify-center">
+            {/* Navigation links */}
             <a
               href="#about"
               onClick={() => handleTabChange("About")}
@@ -42,7 +44,7 @@ export default function Header(props) {
               onClick={() => handleTabChange("Projects")}
               className="ml-4 inline-flex text-white bg-teal-600 border-0 py-2 px-6 focus:outline-none hover-bg-gray-500 hover:text-white rounded text-lg"
             >
-              See My Work
+              Portfolio
             </a>
             <a
               href="#skills"
@@ -66,11 +68,7 @@ export default function Header(props) {
       <section className="bg-gray-200">
         <div className="hero-cta">
           <div className="img-container">
-            {/* <img
-              className="object-cover object-center rounded image"
-              alt="Hafsah Nasreen's Portfolio"
-              src={img}
-            /> */}
+            {/* Hero image can be added here */}
           </div>
         </div>
       </section>
