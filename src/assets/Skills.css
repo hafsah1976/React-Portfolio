@@ -27,6 +27,11 @@
 
 /* ... add more delays for additional skill items */
 
+/* Glow effect */
+.skill-item:hover {
+  animation: glow 1s infinite alternate;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -46,5 +51,14 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 1);
   }
 }
