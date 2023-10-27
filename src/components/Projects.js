@@ -103,13 +103,3 @@ const projects = [
     link: "https://github.com/hafsah1976/A-Tech-Blog",
   },
 ];
-export const skills = [
-  "HTML5",
-  "CSS3",
-  "JavaScript",
-  "React",
-  "Node",
-  "MySQL",
-  "GraphQL",
-  "MongoDB",
-];

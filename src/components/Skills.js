@@ -1,9 +1,19 @@
 import React from "react";
-import { skills } from "../data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faDatabase, faLeaf } from "@fortawesome/free-solid-svg-icons";
 import { faHtml5, faCss3, faJs, faReact, faNode, faGripfire } from "@fortawesome/free-brands-svg-icons";
 import '../assets/Skills.css';
+
+const skills = [
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "React",
+  "Node",
+  "MySQL",
+  "GraphQL",
+  "MongoDB",
+];
 
 export default function Skills() {
   return (

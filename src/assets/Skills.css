@@ -2,40 +2,49 @@
 
 /* Animation for the skills section heading */
 .section-heading {
-    animation: fadeInUp 1s ease-in-out;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Skill item animation */
+.skill-item {
+  animation: slideIn 0.5s ease-out;
+  opacity: 0; /* Start with 0 opacity */
+  transform: translateX(-20px); /* Start with x-axis translation */
+}
+
+/* Apply different delay to each skill item */
+.skill-item:nth-child(1) {
+  animation-delay: 0.2s; /* Delay for the first skill item */
+}
+
+.skill-item:nth-child(2) {
+  animation-delay: 0.4s; /* Delay for the second skill item */
+}
+
+.skill-item:nth-child(3) {
+  animation-delay: 0.6s; /* Delay for the third skill item */
+}
+
+/* ... add more delays for additional skill items */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  /* Skill item animation */
-  .skill-item {
-    animation: scaleIn 0.5s ease-out, slideIn 0.5s ease-out;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
   }
-  
-  @keyframes scaleIn {
-    from {
-      transform: scale(0.8);
-    }
-    to {
-      transform: scale(1);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  @keyframes slideIn {
-    from {
-      transform: translateX(-20px);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-  
+}
