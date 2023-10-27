@@ -4,6 +4,8 @@
 
 This is my personal React portfolio showcasing my work samples and providing information about me. I built this portfolio to demonstrate my skills as a web developer. I created this portfolio to present my work and skills to potential employers or collaborators. It's a single-page application that offers a user-friendly way to navigate and explore my projects and learn more about me. It solves the problem of presenting my work and skills in a visually appealing and easy-to-navigate format, making it easier for potential employers or collaborators to access and view my qualifications.
 
+[View my portfolio]()
+
 ### What I Learned
 
 While building this portfolio, I have gained experience in React, single-page applications, and responsive web design. I also improved my skills in structuring and styling web content.
@@ -57,7 +59,8 @@ You can navigate between these sections using the navigation links in the header
 - [React](https://reactjs.org/): The JavaScript library that powers this portfolio.
 - [GitHub](https://github.com/): For hosting the repository and my project code.
 - [Build Portfolio Website with React - FreeCodeCamp](https://www.freecodecamp.org/news/build-portfolio-website-react/)
-- Used FontAwesome for React to get all the icons. 
+- [Used FontAwesome for React to get all the icons](https://www.npmjs.com/package/@fortawesome/fontawesome-svg-core)
+- [To fix the issue of loading images from an object array](https://copyprogramming.com/howto/how-to-display-an-image-from-an-array-of-images-in-react)
 
 ## License
 
@@ -82,4 +85,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-# My-React-Portfolio

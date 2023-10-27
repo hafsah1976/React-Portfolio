@@ -1,7 +1,12 @@
 import React from "react";
-import { projects } from "../data"; // Import projects data
 import { faCode } from "@fortawesome/free-solid-svg-icons"; // Import the FontAwesome code icon.
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Odd from '../assets/images/odd-quote-out.png'; 
+import Weather from '../assets/images/weather-dashboard.png'; 
+import Jate from '../assets/images/JATE-LAUNCHED.png'; 
+import LogoMaker from '../assets/images/svg-logo-maker.png'; 
+import ApiSocial from '../assets/images/No-sql-socialnet-api.png'; 
+import MvcTechBlog from '../assets/images/the-tech-blog.png'; 
 
 export default function Projects() {
   return (
@@ -18,7 +23,7 @@ export default function Projects() {
         </div>
         <div className="flex flex-wrap -m-4">
           {projects.map((project) => (
-            <a href={project.link} key={project.image} className="sm:w-1/2 w-full p-4">
+            <a href={project.link} key={project.title} className="sm:w-1/2 w-full p-4">
               <div className="flex relative">
                 <img
                   alt="gallery"
@@ -42,3 +47,69 @@ export default function Projects() {
     </section>
   );
 }
+
+//moving data into the projects component itself as I understand 
+//dynamic imports statement inside your projects array is not a valid usage in JavaScript. 
+//Dynamic imports are asynchronous and cannot be used within an object or array definition.
+//therefore using static imports.
+
+const projects = [
+  {
+    title: "Odd Quote Out",
+    subtitle: "HTML, CSS, & JS",
+    description:
+      "A simple quiz app, the first group project.",
+    image: Odd,
+    link: "https://iab-19.github.io/odd_quote_out_kanye_edition/",
+  },
+  {
+    title: "Weather Dashboard",
+    subtitle: "HTML, CSS, and JS",
+    description:
+      "A weather dashboard web where a user can look up weather for a city. This app uses the openweather API to fetch weather upon the submission of the user's search input.",
+    image: Weather, 
+    link: "https://hafsah1976.github.io/Weather-Dashboard/",
+  },
+  {
+    title: "J.A.T.E",
+    subtitle: "A PWA text editor",
+    description:
+      "J.A.T.E is a Progressive Web Application (PWA) designed to provide users with a versatile and rich text editor experience.",
+    image: Jate, 
+    link: "https://stark-depths-32465-9c6c904f031b.herokuapp.com/",
+  },
+  {
+    title: "SVG-LOGO-MAKER",
+    subtitle: "Node.js - Inquirer prompts",
+    description:
+      "A CLI that asks users for their input on the shape, text, and color of the logo, and generates that logo.",
+    image: LogoMaker, 
+    link: "https://github.com/hafsah1976/SVG-LOGO-GENERATOR",
+  },
+  {
+    title: "NoSQL-Social-Network API",
+    subtitle: "NoSQL, MongoDB and Mongoose",
+    description:
+      "This is a backend application where I performed CRUD operations for a Social-Network website.",
+    image: ApiSocial, 
+    link: "https://github.com/hafsah1976/NoSQL-Social-Network-API",
+  },
+  {
+    title: "A Tech Blog",
+    subtitle: "MVC",
+    description:
+      "A CMS-style Tech blog developed using the MVC framework, where users can sign up, make posts, and add comments to other posts.",
+    image: MvcTechBlog,
+    link: "https://github.com/hafsah1976/A-Tech-Blog",
+  },
+];
+export const skills = [
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "React",
+  "Node",
+  "MySQL",
+  "GraphQL",
+  "MongoDB",
+];
