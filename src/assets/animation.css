@@ -1,5 +1,5 @@
 /* Define the keyframes for the fade-in animation */
-@keyframes fadeIn {
+@keyframes fade-in {
     from {
       opacity: 0;
     }
@@ -12,3 +12,6 @@
   .fade-in {
     animation: fadeIn 1s ease-in-out;
   }
+.fade-in:hover{
+   color: "purple";
+}
