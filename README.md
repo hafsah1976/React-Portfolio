@@ -4,7 +4,7 @@
 
 This is my personal React portfolio showcasing my work samples and providing information about me. I built this portfolio to demonstrate my skills as a web developer. I created this portfolio to present my work and skills to potential employers or collaborators. It's a single-page application that offers a user-friendly way to navigate and explore my projects and learn more about me. It solves the problem of presenting my work and skills in a visually appealing and easy-to-navigate format, making it easier for potential employers or collaborators to access and view my qualifications.
 
-[View my portfolio]()
+[View my portfolio](https://hafsah1976.github.io/React-Portfolio/)
 
 ### What I Learned
 
@@ -30,6 +30,8 @@ To run this project locally and explore it:
 
 ## Usage
 
+[Walkthrough of My React Portfolio](https://watch.screencastify.com/v/MntVf1ofmBfT0EoCGeLU)
+
 The portfolio is divided into sections as follows:
 
 ### About Me
@@ -40,7 +42,7 @@ In the "About Me" section, you will find a recent photo or avatar of me along wi
 
 The "Portfolio" section showcases six of my applications. Each application is accompanied by a title, and you can click on the links provided to access the deployed applications and their corresponding GitHub repositories.
 
-![Portfolio Screenshot](assets/images/portfolio-screenshot.png)
+![Portfolio Screenshot](src/assets/images/React-Portfolio.png)
 
 ### Contact
 
