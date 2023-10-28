@@ -1,20 +1,40 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faDatabase, faLeaf} from "@fortawesome/free-solid-svg-icons";
-import { faUikit, faHtml5, faCss3, faJs, faReact, faNodeJs, faGripfire,faGithub, faNode} from "@fortawesome/free-brands-svg-icons";
-import '../assets/Skills.css';
+import {
+  faCheck,
+  faCircleRadiation,
+  faDatabase,
+  faLeaf
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faFreeCodeCamp,
+  faNpm,
+  faUikit,
+  faHtml5,
+  faCss3,
+  faJs,
+  faReact,
+  faNodeJs,
+  faGripfire,
+  faGithub,
+  faGit
+} from "@fortawesome/free-brands-svg-icons";
+import "../assets/animation.css";
 
 const skills = [
-  {name: "HTML5",  link:"https://developer.mozilla.org/en-US/docs/Glossary/HTML5"},
-  {name: "CSS3", link:"https://developer.mozilla.org/en-US/docs/Web/CSS"},
-  {name: "GitHub", link:"https://docs.github.com/en/get-started/getting-started-with-git"},
-  {name:"GraphQL",link: "https://graphql.org/learn/"},
-  {name:"NodeJS",link:"https://nodejs.org/docs/latest-v16.x/api/"},
-  {name: "JavaScript", link:"https://developer.mozilla.org/en-US/docs/Web/JavaScript"},
-  {name: "jQuery", link: "https://api.jquery.com/"},
-  {name:"React", link: "https://legacy.reactjs.org/docs/getting-started.html"},
-  {name: "MySQL", link:"https://dev.mysql.com/doc/"},
-  {name:"MongoDB", link: "https://www.mongodb.com/docs/"},
+
+  {name:" HTML5",  link:"https://developer.mozilla.org/en-US/docs/Glossary/HTML5"},
+  {name:" CSS3", link:"https://developer.mozilla.org/en-US/docs/Web/CSS"},
+  {name:" Git & GitHub", link:"https://docs.github.com/en/get-started/getting-started-with-git"},
+  {name:" GraphQL",link: "https://graphql.org/learn/"},
+  {name:" NodeJS",link:"https://nodejs.org/docs/latest-v16.x/api/"},
+  {name:" Express.js", link: "https://expressjs.com/"},
+  {name:" JavaScript", link:"https://developer.mozilla.org/en-US/docs/Web/JavaScript"},
+  {name:" jQuery", link: "https://api.jquery.com/"},
+  {name:" React", link: "https://legacy.reactjs.org/docs/getting-started.html"},
+  {name:" MySQL", link:"https://dev.mysql.com/doc/"},
+  {name:" MongoDB", link: "https://www.mongodb.com/docs/"},
+  {name:" Template Credits to FreeCodeCamp", link:"https://www.freecodecamp.org/news/build-portfolio-website-react/"},
 ];
 
 export default function Skills() {
@@ -54,35 +74,39 @@ export default function Skills() {
 }
 
 function getSkillIcon(skill) {
-  const iconProps = { icon: faCheck, size: "2x" };
+  const iconProps = { icon: faCheck, size: "2x" }
 
-  switch (skill) {
-    case "HTML5":
-      return <FontAwesomeIcon {...iconProps} icon={faHtml5} />;
-    case "CSS3":
-      return <FontAwesomeIcon {...iconProps} icon={faCss3} />;
-    case "GitHub":
-      return <FontAwesomeIcon {...iconProps} icon={faGithub} />;
-    case "GraphQL":
+   switch (skill) {
+    case " HTML5":
+      return <FontAwesomeIcon {...iconProps} icon={faHtml5} style={{ color: "#33D7FF" }}
+      />;
+    case " CSS3":
+      return <FontAwesomeIcon {...iconProps} icon={faCss3} style={{ color: "#0D6FE5" }}/>;
+    case " Git & GitHub":
+      return <FontAwesomeIcon {...iconProps} icon={faGithub&&faGit} style={{ color: "#33D7FF" }}/>;
+    case " GraphQL":
       return (
         <FontAwesomeIcon
           {...iconProps}
-          icon={faNode}
-          style={{ color: "#ba16c5" }}
-        />
+          icon={faCircleRadiation}
+          style={{ color: "#ba16c5" }}/>
       );
-    case "NodeJS":
-      return <FontAwesomeIcon {...iconProps} icon={faNodeJs} />;
-    case "JavaScript":
-      return <FontAwesomeIcon {...iconProps} icon={faJs} />;
-    case "jQuery":
-      return <FontAwesomeIcon {...iconProps} icon={faUikit&&faJs} />;
-    case "React":
-      return <FontAwesomeIcon {...iconProps} icon={faReact} />;
-    case "MySQL":
-      return <FontAwesomeIcon {...iconProps} icon={faDatabase} />;
-    case "MongoDB":
-      return <FontAwesomeIcon {...iconProps} icon={faLeaf&&faDatabase} />;
+    case " NodeJS":
+      return <FontAwesomeIcon {...iconProps} icon={faNodeJs} style={{ color: "#4AE53D" }}/>;
+  case " Express.js":
+    return<FontAwesomeIcon {...iconProps} icon = {faNpm} style={{ color: "#EA0F13" }}/>;
+    case " JavaScript":
+      return <FontAwesomeIcon {...iconProps} icon={faJs} style={{ color: "#E2F221" }}/>;
+    case " jQuery":
+      return <FontAwesomeIcon {...iconProps} icon={faUikit&&faJs} style={{ color: "#33D7FF" }}/>;
+    case " React":
+      return <FontAwesomeIcon {...iconProps} icon={faReact} style={{ color: "#33D7FF" }}/>;
+    case " MySQL":
+      return <FontAwesomeIcon {...iconProps} icon={faDatabase} style={{ color: "#F2B725" }}/>;
+    case " MongoDB":
+      return <FontAwesomeIcon {...iconProps} icon={faLeaf} style={{ color: "#15A224" }}/>;
+    case " Template Credits to FreeCodeCamp":
+      return <FontAwesomeIcon {...iconProps} icon={faFreeCodeCamp} style={{ color: "#FF6133" }}/>;
     default:
       console.error(`Unsupported skill: ${skill}`);
       return null;

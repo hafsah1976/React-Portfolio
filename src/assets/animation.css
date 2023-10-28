@@ -11,7 +11,8 @@
   /* Apply the animation to an element */
   .fade-in {
     animation: fadeIn 1s ease-in-out;
+    color: #81b5ea;
   }
 .fade-in:hover{
-   color: "purple";
+   color: #cad8e6;
 }
