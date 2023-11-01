@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/React-Portfolio/static/css/main.5eaccd01.css",
-    "main.js": "/React-Portfolio/static/js/main.5dc41b4c.js",
-    "static/media/the-tech-blog.png": "/React-Portfolio/static/media/the-tech-blog.a3bcf94fa74e2de24f53.png",
+    "main.js": "/React-Portfolio/static/js/main.7bd42dd8.js",
+    "static/media/google-book-search-engine.png": "/React-Portfolio/static/media/google-book-search-engine.497d629db18f5c8bd934.png",
     "static/media/weather-dashboard.png": "/React-Portfolio/static/media/weather-dashboard.9b3d82d5b8d67638c980.png",
+    "static/media/ufree_homepage.png": "/React-Portfolio/static/media/ufree_homepage.06913d2006d00597532c.png",
     "static/media/svg-logo-maker.png": "/React-Portfolio/static/media/svg-logo-maker.e3ffb58f77388d35cfbd.png",
     "static/media/odd-quote-out.png": "/React-Portfolio/static/media/odd-quote-out.258c34c0cd6ecbeca277.png",
     "static/media/No-sql-socialnet-api.png": "/React-Portfolio/static/media/No-sql-socialnet-api.e5657cf237b34b0f4b55.png",
@@ -12,10 +13,10 @@
     "static/media/hop.jpg": "/React-Portfolio/static/media/hop.5527ccf8645f27aa8db7.jpg",
     "index.html": "/React-Portfolio/index.html",
     "main.5eaccd01.css.map": "/React-Portfolio/static/css/main.5eaccd01.css.map",
-    "main.5dc41b4c.js.map": "/React-Portfolio/static/js/main.5dc41b4c.js.map"
+    "main.7bd42dd8.js.map": "/React-Portfolio/static/js/main.7bd42dd8.js.map"
   },
   "entrypoints": [
     "static/css/main.5eaccd01.css",
-    "static/js/main.5dc41b4c.js"
+    "static/js/main.7bd42dd8.js"
   ]
 }
