@@ -7,6 +7,8 @@ import Jate from '../assets/images/JATE-LAUNCHED.png';
 import LogoMaker from '../assets/images/svg-logo-maker.png'; 
 import ApiSocial from '../assets/images/No-sql-socialnet-api.png'; 
 import MvcTechBlog from '../assets/images/the-tech-blog.png'; 
+import uFree from '../assets/images/ufree.png';
+import googleBooks from '../assets/images/googleApi.png';
 
 export default function Projects() {
   return (
@@ -102,4 +104,19 @@ const projects = [
     image: MvcTechBlog,
     link: "https://github.com/hafsah1976/A-Tech-Blog",
   },
+  {
+  title: "uFree",
+  subtitle: "An Event scheduling Web-App which is also a React-PWA",
+  description: "A web app for friends where each can schedule events and  CMS-style Tech blog developed using the MVC framework, where users can sign up, make posts, and add comments to other posts.",
+  image: uFree,
+  link: "https://github.com/hafsah1976/A-Tech-Blog",
+  },
+  {
+    title: "Google Books Search Engine",
+    subtitle: "A simple yet complex search engine just for browsing books.",
+    description: "A MERN Stack app where you can create account and look up books to save them for future reading plans.",
+    image: googleBooks,
+    link: "https://github.com/hafsah1976/A-Tech-Blog",
+    },
+  
 ];
