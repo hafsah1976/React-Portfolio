@@ -6,7 +6,6 @@ import Weather from '../assets/images/weather-dashboard.png';
 import Jate from '../assets/images/JATE-LAUNCHED.png'; 
 import LogoMaker from '../assets/images/svg-logo-maker.png'; 
 import ApiSocial from '../assets/images/No-sql-socialnet-api.png'; 
-import MvcTechBlog from '../assets/images/the-tech-blog.png'; 
 import uFree from '../assets/images/ufree_homepage.png';
 import googleBooks from '../assets/images/google-book-search-engine.png';
 
@@ -95,14 +94,6 @@ const projects = [
       "This is a backend application where I performed CRUD operations for a Social-Network website.",
     image: ApiSocial, 
     link: "https://github.com/hafsah1976/NoSQL-Social-Network-API",
-  },
-  {
-    title: "A Tech Blog",
-    subtitle: "MVC",
-    description:
-      "A CMS-style Tech blog developed using the MVC framework, where users can sign up, make posts, and add comments to other posts.",
-    image: MvcTechBlog,
-    link: "https://github.com/hafsah1976/A-Tech-Blog",
   },
   {
   title: "uFree",
