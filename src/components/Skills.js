@@ -17,7 +17,7 @@ import {
   faNodeJs,
   faGripfire,
   faGithub,
-  faGit
+  faGit,
 } from "@fortawesome/free-brands-svg-icons";
 import "../assets/animation.css";
 
